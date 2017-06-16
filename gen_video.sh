@@ -1,0 +1,3 @@
+#!/bin/sh
+curl 'http://116.62.70.249/project/generate/' -H 'Origin: http://116.62.70.249' -H 'Accept-Encoding: gzip, deflate' -H 'Accept-Language: en-US,en;q=0.8' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36' -H 'content-type: application/x-www-form-urlencoded' -H 'Accept: */*' -H 'Referer: http://116.62.70.249/static/index.html' -H 'Cookie: csrftoken=WCNbJSQ1BkfUbLCuyQzLamMCYkDqyBqPc1BuMKcD5D91EKRE75GFAHWCbcnOipTC; sessionid=u4kijwtic2gogasoabi0jahyn3z6qqfm' -H 'Proxy-Connection: keep-alive' --data 'project_id=$1' --compressed
+
