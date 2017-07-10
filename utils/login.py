@@ -42,6 +42,7 @@ class Login(object):
             raise Exception('other systems are not support for getting cookies for now')
             return None
 
+
 def get_cookies():
     '''
     Login中的这个函数还没有调试成功

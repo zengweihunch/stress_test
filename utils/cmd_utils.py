@@ -42,3 +42,15 @@ def run_sys_command(cmd_arr, extra_env=None):
 
     print '>>>>>>>type',type(ret)
     return ret
+
+if __name__ == "__main__":
+    from cmd_utils import run_sys_command
+    print 'start...'
+    cmd = ['/mnt/tmp/tts_snippet']
+
+    cmd.append('-N')
+    cmd.append(str('13307_6_1_None_None'))
+    text = ''
+    cmd.append(text.encode('utf-8'))
+
+    run_sys_command(cmd, {'LD_LIBRARY_PATH': '/mnt/tmp'})

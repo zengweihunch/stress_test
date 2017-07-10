@@ -7,7 +7,7 @@ import os
 import config
 import time
 
-from data import weixin
+from data import weixin, toutiao
 from utils import result
 
 def get_worker_path(worker_name):
@@ -59,11 +59,15 @@ if __name__ == "__main__":
     # 1
     #case1()
 
-    # 2
-    work_name = 'create'
+    ## 2 压力测试，数据源，微信
+    #work_name = 'create'
+    #work_result_path = config.workers_path + work_name + '_result.py'
+    #print '<<<<<<work'
+    #run(100, work_name, weixin.weixin_doc_url)
+    ##result.write_to_csv()
 
-    work_result_path = config.workers_path + work_name + '_result.py'
-    print '<<<<<<work'
-    run(100, work_name, weixin.weixin_doc_url)
-    #result.write_to_csv()
-    pass
+    # 3 压力测试，数据源，今日头条
+    work_name = 'create'
+    data_origin = 'toutiao'
+    print 'end'
+    run(100, work_name, toutiao.toutiao_url, pool_size=1, off_set=30)
